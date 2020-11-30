@@ -22,12 +22,14 @@ stroke(15);
   text("Score: "+score,20,20)
   if(gameState==="Play"){
   for(var i=0;i<TileGroup.length;i++){
-
-    if(mousePressedOver(TileGroup.get(0))){
+if (touches.length>0){
+    if(TileGroup.get(0).overlapPoint(touches[0].x,touches[0].y)){
       TileGroup.get(0).destroy();
       score++
+	    touches=[]
   //NaachMeriRanisound.play();
     }
+  }
   }
   for(var i=0;i<TileGroup.length;i++){
 if(TileGroup.get(0).y>height){
