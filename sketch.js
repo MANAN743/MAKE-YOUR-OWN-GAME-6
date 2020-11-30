@@ -8,7 +8,7 @@ function preload()
  NaachMeriRanisound=loadSound("test.mp3")
 }
 function setup() {
-	createCanvas(windowWidth,windowHeight);
+	createCanvas(displayWidth,displayHeight);
   TileGroup=new Group();
    NaachMeriRanisound.loop(); 
 }
@@ -30,7 +30,7 @@ stroke(15);
     }
   }
   for(var i=0;i<TileGroup.length;i++){
-if(TileGroup.get(0).y>displayHeight){
+if(TileGroup.get(0).y>height){
   gameState="End"
   
 }
